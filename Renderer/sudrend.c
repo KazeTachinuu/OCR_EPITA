@@ -25,7 +25,6 @@ typedef struct {
 
 board_t brd;
 
-TTF_Font *font;
 
 /*
 - x, y: upper left corner.
@@ -54,28 +53,11 @@ void get_text_and_rect(SDL_Renderer *renderer, int x, int y, char *text,
   rect->h = text_height;
 }
 
-// genboard -- generate sudoku board
-void genboard(board_t brd) {
-
-  for (int y = 0; y < SUDYMAX; ++y) {
-    for (int x = 0; x < SUDYMAX; ++x)
-      brd[y][x] = 0;
-  }
-
-  int maxpt = (rand() % (SUDYMAX * SUDXMAX)) + 1;
-
-  for (int curpt = 0; curpt < maxpt; ++curpt) {
-    int y = rand() % SUDYMAX;
-    int x = rand() % SUDYMAX;
-    int val = rand() % 10;
-    brd[y][x] = val;
-  }
-}
 
 // prtboard -- print sudoku board as text
-void prtboard(board_t brd) {
+void prtboard(board_t brd,char* filename) {
 
-  FILE *fp = fopen("sud.txt", "w");
+  FILE *fp = fopen(filename, "w");
   for (int y = 0; y < SUDYMAX; ++y) {
     if ((y % 3) == 0 && y != 0)
       fprintf(fp,"\n");
@@ -138,6 +120,34 @@ void drawbox(SDL_Renderer *renderer) {
   }
 }
 
+
+
+void readboard(board_t board,char *filename) {
+  int i, j;
+  int counti = 0, countj = 0;
+  FILE *infile;
+  infile = fopen(filename, "r");
+  for (i = 0; i < 9; i++) {
+    countj = 0;
+    if (counti == 3 || counti == 6) {
+      fscanf(infile, "\n");
+    }
+    for (j = 0; j < 9; j++) {
+
+      if (countj == 3 || countj == 6) {
+        fscanf(infile, "%*c");
+      }
+      fscanf(infile, "%c", &board[i][j]);
+      countj++;
+    }
+    fscanf(infile, "\n");
+    counti++;
+  }
+  fclose(infile);
+}
+
+
+
 void drawtext(SDL_Renderer *renderer) {
   int gridmax;
   int boxmax_y;
@@ -170,6 +180,8 @@ void drawtext(SDL_Renderer *renderer) {
       else
         buf[0] = ' ';
       buf[1] = 0;
+
+      TTF_Font *font = TTF_OpenFont("Sans.ttf",24);
       get_text_and_rect(renderer, 0, 0, buf, font, &texture, &trect);
 
       int xbase = xbox * gridmax;
@@ -224,67 +236,25 @@ void imgsave(SDL_Renderer *renderer, int imgno) {
   free(pixmap);
 }
 
-void fontinit(const char *font_tail) {
-  const char *dir;
-  char font_path[1000];
-
-  TTF_Init();
-
-  for (int idx = 0; idx <= 1; ++idx) {
-    switch (idx) {
-    case 0:
-      dir = NULL;
-      break;
-    default: // NOTE: my system needed this
-      dir = "/usr/share/fonts/ComicCodeLigatures-Regular.otf";
-      break;
-    }
-
-    if (dir == NULL)
-      strcpy(font_path, font_tail);
-    else
-      sprintf(font_path, "%s/%s", dir, font_tail);
-
-    font = TTF_OpenFont(font_path, 24);
-    if (font != NULL)
-      break;
-  }
-
-  if (font == NULL) {
-    fprintf(stderr, "error: font not found\n");
-    exit(EXIT_FAILURE);
-  }
-}
 
 int main(int argc, char **argv) {
   SDL_Event event;
   SDL_Renderer *renderer;
   SDL_Window *window;
-  char *font_path;
   int quit;
 
-  switch (argc) {
-  case 1:
-    font_path = "/usr/share/fonts/ComicCodeLigatures-Regular.otf";
-    break;
-  case 2:
-    font_path = argv[1];
-    break;
-  default:
-    fprintf(stderr, "error: too many arguments\n");
+  if (argc != 2){
+    fprintf(stderr, "use case : ./sudrend <filename>\n");
     exit(EXIT_FAILURE);
-    break;
   }
 
-  genboard(brd);
-  prtboard(brd);
+  char* filename = argv[1];
 
   /* Inint TTF. */
   SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO);
   SDL_CreateWindowAndRenderer(WINDOW_WIDTH, WINDOW_WIDTH, 0, &window,
                               &renderer);
 
-  fontinit(font_path);
 
 #if 0
     SDL_Rect rect1, rect2;
