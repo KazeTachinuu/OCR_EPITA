@@ -1,0 +1,153 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	Development	//
+CC	IMGProcess/Makefile	/^CC = gcc$/;"	m
+CC	MNIST_for_C/Makefile	/^CC = cc$/;"	m
+CC	Neural_Network/Makefile	/^CC = gcc$/;"	m
+CC	Renderer/Makefile	/^CC = cc$/;"	m
+CC	Solver/Makefile	/^CC = gcc$/;"	m
+CFLAGS	IMGProcess/Makefile	/^CFLAGS = -Wall -Wextra -lm -O3 `pkg-config --cflags sdl2 SDL2_image`$/;"	m
+CFLAGS	MNIST_for_C/Makefile	/^CFLAGS =  $/;"	m
+CFLAGS	Neural_Network/Makefile	/^CFLAGS = -Wall -Wextra$/;"	m
+CFLAGS	Renderer/Makefile	/^CFLAGS =  `pkg-config --libs --cflags SDL2_ttf` -g$/;"	m
+CFLAGS	Solver/Makefile	/^CFLAGS = -Wall -Wextra$/;"	m
+COLS	Solver/solver.c	7;"	d	file:
+CPPFLAGS	IMGProcess/Makefile	/^CPPFLAGS =$/;"	m
+CPPFLAGS	MNIST_for_C/Makefile	/^CPPFLAGS =$/;"	m
+CPPFLAGS	Neural_Network/Makefile	/^CPPFLAGS = -MMD$/;"	m
+CPPFLAGS	Renderer/Makefile	/^CPPFLAGS =$/;"	m
+CPPFLAGS	Solver/Makefile	/^CPPFLAGS = -MMD$/;"	m
+DEP	Neural_Network/Makefile	/^DEP = ${SRC:.c=.d}$/;"	m
+DEP	Solver/Makefile	/^DEP = ${SRC:.c=.d}$/;"	m
+EXE	IMGProcess/Makefile	/^EXE = ${SRC:.c=} $/;"	m
+EXE	MNIST_for_C/Makefile	/^EXE = ${SRC:.c=} $/;"	m
+EXE	Neural_Network/Makefile	/^EXE = ${SRC:.c=}$/;"	m
+EXE	Renderer/Makefile	/^EXE = ${SRC:.c=} $/;"	m
+FlipLong	MNIST_for_C/mnist.h	/^void FlipLong(unsigned char *ptr) {$/;"	f
+GEN	Renderer/Makefile	/^GEN = *.gen$/;"	m
+GEN	Solver/Makefile	/^GEN = *.gen$/;"	m
+GRAYSCALE_H	IMGProcess/new_grayscale.h	2;"	d
+GRIDMAX	Renderer/sudrend.c	8;"	d	file:
+G_RANGE	IMGProcess/noise.c	9;"	d	file:
+I	IMGProcess/pixel.c	/^int I(SDL_surface *source, int x, int y)$/;"	f
+IMG	Renderer/Makefile	/^IMG = *.png$/;"	m
+LDFLAGS	IMGProcess/Makefile	/^LDFLAGS =$/;"	m
+LDFLAGS	MNIST_for_C/Makefile	/^LDFLAGS =$/;"	m
+LDFLAGS	Neural_Network/Makefile	/^LDFLAGS =$/;"	m
+LDFLAGS	Renderer/Makefile	/^LDFLAGS =$/;"	m
+LDFLAGS	Solver/Makefile	/^LDFLAGS =$/;"	m
+LDLIBS	IMGProcess/Makefile	/^LDLIBS = `pkg-config --libs sdl2 SDL2_image`$/;"	m
+LDLIBS	MNIST_for_C/Makefile	/^LDLIBS = $/;"	m
+LDLIBS	Neural_Network/Makefile	/^LDLIBS = -lm$/;"	m
+LDLIBS	Renderer/Makefile	/^LDLIBS = $/;"	m
+LDLIBS	Solver/Makefile	/^LDLIBS =$/;"	m
+LEN_INFO_IMAGE	MNIST_for_C/mnist.h	17;"	d
+LEN_INFO_LABEL	MNIST_for_C/mnist.h	18;"	d
+MAX_BRIGHTNESS	MNIST_for_C/mnist.h	21;"	d
+MAX_FILENAME	MNIST_for_C/mnist.h	22;"	d
+MAX_IMAGESIZE	MNIST_for_C/mnist.h	20;"	d
+MAX_NUM_OF_IMAGES	MNIST_for_C/mnist.h	23;"	d
+M_PI	IMGProcess/new_rotation.c	8;"	d	file:
+NN	Neural_Network/Makefile	/^NN = *.nn$/;"	m
+NUM_TEST	MNIST_for_C/mnist.h	16;"	d
+NUM_TRAIN	MNIST_for_C/mnist.h	15;"	d
+OBJ	IMGProcess/Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+OBJ	MNIST_for_C/Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+OBJ	Neural_Network/Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+OBJ	Renderer/Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+OBJ	Solver/Makefile	/^OBJ = ${SRC:.c=.o}$/;"	m
+PIXEL_H	IMGProcess/pixel.h	2;"	d
+PPM	Renderer/Makefile	/^PPM = *.ppm$/;"	m
+RESULT	Solver/Makefile	/^RESULT = *.result$/;"	m
+ROWS	Solver/solver.c	6;"	d	file:
+SIZE	MNIST_for_C/mnist.h	14;"	d
+SRC	IMGProcess/Makefile	/^SRC = rotate.c grayscale.c$/;"	m
+SRC	MNIST_for_C/Makefile	/^SRC = main.c$/;"	m
+SRC	Neural_Network/Makefile	/^SRC = perceptron.c$/;"	m
+SRC	Renderer/Makefile	/^SRC = sudrend.c$/;"	m
+SRC	Solver/Makefile	/^SRC = solver.c generate.c main.c$/;"	m
+SUDBOXMAX	Renderer/sudrend.c	10;"	d	file:
+SUDXMAX	Renderer/sudrend.c	11;"	d	file:
+SUDYMAX	Renderer/sudrend.c	12;"	d	file:
+TEST_IMAGE	MNIST_for_C/mnist.h	11;"	d
+TEST_LABEL	MNIST_for_C/mnist.h	12;"	d
+TMP	IMGProcess/Makefile	/^TMP = *_rotated.bmp$/;"	m
+TRAIN_IMAGE	MNIST_for_C/mnist.h	9;"	d
+TRAIN_LABEL	MNIST_for_C/mnist.h	10;"	d
+WINDOW_HEIGHT	Renderer/sudrend.c	7;"	d	file:
+WINDOW_WIDTH	Renderer/sudrend.c	6;"	d	file:
+b	Renderer/sudrend.c	/^  byte b;$/;"	m	struct:__anon1	file:
+board_t	Renderer/sudrend.c	/^typedef char board_t[SUDYMAX][SUDXMAX];$/;"	t	file:
+brd	Renderer/sudrend.c	/^board_t brd;$/;"	v
+build_kernelv1	IMGProcess/noise.c	/^double* build_kernelv1(int size)$/;"	f
+byte	Renderer/sudrend.c	/^typedef unsigned char byte;$/;"	t	file:
+checkval	Solver/solver.c	/^int checkval(char board[ROWS][COLS], int i, int j, char v) {$/;"	f
+convertboard	Renderer/sudrend.c	/^void convertboard(board_t board) {$/;"	f
+dSigmoid	Neural_Network/perceptron.c	/^double dSigmoid(double x) { return x * (1 - x); }$/;"	f
+draw	IMGProcess/grayscale.c	/^void draw(SDL_Renderer* renderer, SDL_Texture* texture)$/;"	f
+drawbox	Renderer/sudrend.c	/^void drawbox(SDL_Renderer *renderer) {$/;"	f
+drawgrid	Renderer/sudrend.c	/^void drawgrid(SDL_Renderer *renderer) {$/;"	f
+drawtext	Renderer/sudrend.c	/^void drawtext(SDL_Renderer *renderer) {$/;"	f
+event_loop	IMGProcess/grayscale.c	/^void event_loop(SDL_Renderer* renderer, SDL_Texture* colored, SDL_Texture* grayscale)$/;"	f
+font	Renderer/sudrend.c	/^TTF_Font *font;$/;"	v
+fontinit	Renderer/sudrend.c	/^void fontinit(const char *font_tail) {$/;"	f
+g	Renderer/sudrend.c	/^  byte g;$/;"	m	struct:__anon1	file:
+gauss	IMGProcess/noise.c	/^double gauss(double x, double sigma)$/;"	f
+gaussian_blur	IMGProcess/noise.c	/^SDL_Surface* gaussian_blur(SDL_Surface* surface)$/;"	f
+gb_in_place	IMGProcess/noise.c	/^void gb_in_place(SDL_Surface *source)$/;"	f
+generate	Solver/generate.c	/^void generate(char board[9][9], int difficulty) {$/;"	f
+getPixel	IMGProcess/pixel.c	/^uint32_t getPixel(SDL_Surface *surface, int x, int y)$/;"	f
+get_text_and_rect	Renderer/sudrend.c	/^void get_text_and_rect(SDL_Renderer *renderer, int x, int y, char *text,$/;"	f
+height	MNIST_for_C/mnist.h	/^int width[MAX_NUM_OF_IMAGES], height[MAX_NUM_OF_IMAGES];$/;"	v
+image	MNIST_for_C/mnist.h	/^unsigned char image[MAX_NUM_OF_IMAGES][MAX_IMAGESIZE][MAX_IMAGESIZE];$/;"	v
+image_char2double	MNIST_for_C/mnist.h	/^void image_char2double(int num_data, unsigned char data_image_char[][SIZE],$/;"	f
+imgsave	Renderer/sudrend.c	/^void imgsave(SDL_Renderer *renderer, char *filename) {$/;"	f
+info_image	MNIST_for_C/mnist.h	/^int info_image[LEN_INFO_IMAGE];$/;"	v
+info_label	MNIST_for_C/mnist.h	/^int info_label[LEN_INFO_LABEL];$/;"	v
+init_weight	Neural_Network/perceptron.c	/^double init_weight() { return ((double)rand())\/((double)RAND_MAX); }$/;"	f
+label_char2int	MNIST_for_C/mnist.h	/^void label_char2int(int num_data, unsigned char data_label_char[][1],$/;"	f
+load_image	IMGProcess/grayscale.c	/^SDL_Surface* load_image(const char* path)$/;"	f
+load_mnist	MNIST_for_C/mnist.h	/^void load_mnist() {$/;"	f
+main	IMGProcess/grayscale.c	/^int main(int argc, char** argv)$/;"	f
+main	IMGProcess/rotate.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	MNIST_for_C/main.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	Neural_Network/perceptron.c	/^int main(int argc, const char * argv[]) {$/;"	f
+main	Renderer/sudrend.c	/^int main(int argc, char **argv) {$/;"	f
+main	Solver/generate.c	/^int main(int argc, char* argv[]) {$/;"	f
+main	Solver/solver.c	/^int main(int argc, char *argv[]) {$/;"	f
+pixel_t	Renderer/sudrend.c	/^} pixel_t;$/;"	t	typeref:struct:__anon1	file:
+pixel_to_grayscale	IMGProcess/grayscale.c	/^Uint32 pixel_to_grayscale(Uint32 pixel_color, SDL_PixelFormat* format)$/;"	f
+pixeltograyscale	IMGProcess/new_grayscale.c	/^uint32_t pixeltograyscale(uint32_t pixel_color, SDL_PixelFormat* format)$/;"	f
+print_mnist_label	MNIST_for_C/mnist.h	/^void print_mnist_label(int data_label[], int num_data) {$/;"	f
+print_mnist_pixel	MNIST_for_C/mnist.h	/^void print_mnist_pixel(double data_image[][SIZE], int num_data) {$/;"	f
+printboard	Solver/generate.c	/^void printboard(char board[9][9], char *filename) {$/;"	f
+printboard	Solver/solver.c	/^void printboard(char board[ROWS][COLS], char *filename) {$/;"	f
+r	Renderer/sudrend.c	/^  byte r;$/;"	m	struct:__anon1	file:
+randinputs	Neural_Network/perceptron.c	/^int randinputs[] = {0, 1, 2, 3};$/;"	v
+read_mnist_char	MNIST_for_C/mnist.h	/^void read_mnist_char(char *file_path, int num_data, int len_info, int arr_n,$/;"	f
+readboard	Renderer/sudrend.c	/^void readboard(char board[9][9], char *filename) {$/;"	f
+readboard	Solver/solver.c	/^void readboard(char board[ROWS][COLS], char *filename) {$/;"	f
+rotate	IMGProcess/rotate.c	/^SDL_Surface *rotate(SDL_Surface *image, double angle) {$/;"	f
+rotate_shearing	IMGProcess/new_rotation.c	/^SDL_Surface *rotate_shearing(SDL_Surface *surface, double angle)$/;"	f
+saveImage	IMGProcess/rotate.c	/^void saveImage(SDL_Surface *image, char *filename) {$/;"	f
+save_image	MNIST_for_C/mnist.h	/^void save_image(int n, char name[]) {$/;"	f
+save_mnist_pgm	MNIST_for_C/mnist.h	/^void save_mnist_pgm(double data_image[][SIZE], int index) {$/;"	f
+setPixel	IMGProcess/pixel.c	/^void setPixel(SDL_Surface *surface, int x, int y, uint32_t pixel)$/;"	f
+shuffle	Neural_Network/perceptron.c	/^void shuffle(int *array, size_t n) {$/;"	f
+sigmoid	Neural_Network/perceptron.c	/^double sigmoid(double x) { return 1 \/ (1 + exp(-x)); }$/;"	f
+solution	Solver/solver.c	/^int solution(char board[ROWS][COLS], int i, int j, char *filename)$/;"	f
+solvedBoard	Solver/generate.c	/^char solvedBoard[9][9] = {$/;"	v
+surface_to_grayscale	IMGProcess/grayscale.c	/^void surface_to_grayscale(SDL_Surface* surface)$/;"	f
+surfacetograyscale	IMGProcess/new_grayscale.c	/^void surfacetograyscale(SDL_Surface* surface)$/;"	f
+test_image	MNIST_for_C/mnist.h	/^double test_image[NUM_TEST][SIZE];$/;"	v
+test_image_char	MNIST_for_C/mnist.h	/^unsigned char test_image_char[NUM_TEST][SIZE];$/;"	v
+test_label	MNIST_for_C/mnist.h	/^int test_label[NUM_TEST];$/;"	v
+test_label_char	MNIST_for_C/mnist.h	/^unsigned char test_label_char[NUM_TEST][1];$/;"	v
+train_image	MNIST_for_C/mnist.h	/^double train_image[NUM_TRAIN][SIZE];$/;"	v
+train_image_char	MNIST_for_C/mnist.h	/^unsigned char train_image_char[NUM_TRAIN][SIZE];$/;"	v
+train_label	MNIST_for_C/mnist.h	/^int train_label[NUM_TRAIN];$/;"	v
+train_label_char	MNIST_for_C/mnist.h	/^unsigned char train_label_char[NUM_TRAIN][1];$/;"	v
+width	MNIST_for_C/mnist.h	/^int width[MAX_NUM_OF_IMAGES], height[MAX_NUM_OF_IMAGES];$/;"	v

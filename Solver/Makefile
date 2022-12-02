@@ -6,11 +6,13 @@ CFLAGS = -Wall -Wextra
 LDFLAGS =
 LDLIBS =
 
-SRC = solver.c 
+SRC = solver.c generate.c main.c
 OBJ = ${SRC:.c=.o}
 DEP = ${SRC:.c=.d}
 RESULT = *.result
-solver: ${OBJ}
+GEN = *.gen
+all : solver generate 
+
 
 -include ${DEP}
 
@@ -20,6 +22,8 @@ clean:
 	${RM} ${OBJ}
 	${RM} ${DEP}
 	${RM} ${RESULT}
-	${RM} solver 
+	${RM} ${GEN}
+	${RM} solver
+	${RM} generate
 
 # END

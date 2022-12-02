@@ -11,6 +11,7 @@ all: sudrend
 SRC = sudrend.c
 OBJ = ${SRC:.c=.o}
 EXE = ${SRC:.c=} 
+GEN = *.gen
 PPM = *.ppm
 IMG = *.png
 
@@ -18,6 +19,7 @@ IMG = *.png
 
 clean:
 	${RM} ${OBJ}
+	${RM} ${GEN}
 	${RM} ${EXE}
 	${RM} ${PPM}
 	${RM} ${IMG}

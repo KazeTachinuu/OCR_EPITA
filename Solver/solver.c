@@ -57,21 +57,21 @@ int checkval(char board[ROWS][COLS], int i, int j, char v) {
   for (x = 0; x < 9; x++) {
     if (x != i)
       if (board[x][j] == v)
-        return 0;
+        return EXIT_SUCCESS;
   }
   for (y = 0; y < 9; y++) {
     if (y != j)
       if (board[i][y] == v)
-        return 0;
+        return EXIT_SUCCESS;
   }
   for (x = (i / 3) * 3; x < (i / 3) * 3 + 3; x++) {
     for (y = (j / 3) * 3; y < (j / 3) * 3 + 3; y++) {
       if ((x != i) || (y != j))
         if (board[x][y] == v)
-          return 0;
+          return EXIT_SUCCESS;
     }
   }
-  return 1;
+  return EXIT_FAILURE;
 }
 
 int solution(char board[ROWS][COLS], int i, int j, char *filename)
@@ -84,30 +84,30 @@ int solution(char board[ROWS][COLS], int i, int j, char *filename)
   }
   if (i == 9) {
     printboard(board, filename);
-    return 1;
+    return EXIT_SUCCESS;
   }
   if (board[i][j] != '.') {
     if (solution(board, i, j + 1, filename))
-      return 0;
+      return EXIT_SUCCESS;
   } else {
     for (v = '1'; v <= '9'; v++)
       if (checkval(board, i, j, v)) {
         board[i][j] = v;
         if (solution(board, i, j + 1, filename))
-          return 1;
+          return EXIT_FAILURE;
       }
     board[i][j] = '.';
   }
-  return 0;
+  return EXIT_SUCCESS;
 }
 
 int main(int argc, char *argv[]) {
   if (argc != 2) {
     printf("Usage: %s <filename>)", argv[0]);
-    return 1;
+    return EXIT_FAILURE;
     }
   char board[ROWS][COLS];
   readboard(board, argv[1]);
   solution(board, 0, 0, argv[1]);
-  return 0;
+  return EXIT_SUCCESS;
 }

@@ -1,0 +1,20 @@
+Rémy main
+
+Rotation (shearing)                                 [TS]
+Grayscale function                                  [OK]
+Noise reduction:
+    - Gaussian blur                                 [TS]
+Binarisation (Adaptive threshold)                   [TS]
+
+Line detection (Hough Transform)                    [TS]
+Blob detection                                      [TS]
+Morphology                                          [  ]
+Grid corner detection                               [  ]
+Perspective transformation                          [  ]
+
+----------------------------------------------------------
+
+Antoine main + Rémy sub
+
+Grid partitioning                                   [  ]
+Noise cleanup                                       [  ]
